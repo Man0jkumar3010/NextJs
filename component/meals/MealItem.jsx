@@ -3,24 +3,33 @@ import Image from 'next/image';
 
 import classes from './meal-item.module.css';
 
-export default function MealItem({ title, slug, image, summary, creator }) {
+export default function MealItem({meals}) {
+
+ 
+
+//   const { title, summary } = meals
+// console.log("mealsItem ==>,",meals);
+
+
   return (
     <article className={classes.meal}>
       <header>
-        <div className={classes.image}>
-          <Image src={image} alt={title} fill />
+        <div className={classes.image}>̀̀
+          <Image src={meals.image} alt={meals.title} fill />
         </div>
         <div className={classes.headerText}>
-          <h2>{title}</h2>
-          <p>by {creator}</p>
+          <h2>{meals.title}</h2>
+          <p>by {meals.creator}</p>
         </div>
       </header>
       <div className={classes.content}>
-        <p className={classes.summary}>{summary}</p>
+        <p className={classes.summary}>{meals.summary}</p>
         <div className={classes.actions}>
-          <Link href={`/meals/${slug}`}>View Details</Link>
+          <Link href={`/meals/${meals.slug}`}>View Details</Link>
         </div>
       </div>
     </article>
+
+
   );
 }
