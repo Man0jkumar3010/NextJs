@@ -4,13 +4,6 @@ import Image from 'next/image';
 import classes from './meal-item.module.css';
 
 export default function MealItem({meals}) {
-
- 
-
-//   const { title, summary } = meals
-// console.log("mealsItem ==>,",meals);
-
-
   return (
     <article className={classes.meal}>
       <header>

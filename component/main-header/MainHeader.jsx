@@ -4,11 +4,9 @@ import logoImg from "@/assets/logo.png";
 import classes from "./main-header.module.css";
 import Image from "next/image";
 import MainHeaderBackground from "./MainHeaderBackground";
-import { usePathname } from "next/navigation";
 import NavLink from "./NavLink";
 
 export default function MainHeader() {
-  const path = usePathname();
   return (
     <>
       <MainHeaderBackground />

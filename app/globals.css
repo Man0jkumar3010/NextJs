@@ -32,6 +32,7 @@ svg {
 .error {
   margin-top: 5rem;
   text-align: center;
+  color: #ddd8d8;
 }
 
 .not-found h1,

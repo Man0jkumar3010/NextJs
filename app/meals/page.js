@@ -7,8 +7,15 @@ import classes from "./page.module.css";
 import { getMeals } from "@/lib/meals";
 import MealsGrid from "@/component/meals/MealsGrid";
 
+export const metadata = {
+  title: "All meals",
+  description : "Showing all the meals content"
+}
+
 async function Meals() {
   const meals = await getMeals();
+  console.log("getMeals ===>",meals);
+  
   return <MealsGrid meals={meals} />;
 }
 
